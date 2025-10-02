@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="Stylesheet" href="css/ui.css">
+    <link rel="Stylesheet" href="css/theme.css">
+    <link rel="Stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="version">v 0.9.3</div>
+
+<div class="group">
+
+    <div class="svg-icon" icon="logo" id="logo"></div>
+
+    <div class="frame selector dropdown" data-type="first">
+        <span class="label lang" data-label="label selector first"></span>
+        <span class="text lang" data-label="text selector first"></span>
+        <span class="svg-icon" icon="down"></span>
+        <div class="menu">
+            <div class="menu-item lang" data-label="text item active" value="active"></div> 
+            <div class="menu-divider"></div>
+            <div class="menu-item lang" data-label="text item external" value="external"></div>
+        </div>        
+    </div>
+
+    <div class="frame selector dropdown" data-type="last">
+        <span class="label lang" data-label="label selector last"></span>
+        <span class="text lang" data-label="text selector last"></span> 
+        <span class="svg-icon" icon="down"></span>
+        <div class="menu">
+            <div class="menu-item lang" data-label="text item active" value="active"></div>
+            <div class="menu-divider"></div>
+            <div class="menu-item lang" data-label="text item external" value="external"></div> 
+        </div>     
+    </div>
+
+    <div class="operation selector dropdown" data-type="match">
+        <span class="label lang" data-label="label selector match"></span> 
+        <span class="text lang" data-label="text selector match"></span>
+        <span class="svg-icon" icon="down"></span>
+        <div class="menu">
+            <div class="menu-item lang" data-label="text item first" value="first"></div>
+            <div class="menu-item lang" data-label="text item last" value="last"></div>
+            <div class="menu-divider"></div>
+            <div class="menu-item lang" data-label="text item active" value="active"></div>
+            <div class="menu-item lang" data-label="text item external" value="external"></div>
+        </div>
+    </div>
+
+    <div id="matcher">
+        <div class="button">
+            <span class="text lang" data-label="button match">MATCH NOW</span>
+            <!-- <span class="svg-icon" icon="sparkles"></span> -->
+        </div>
+    </div>
+
+</div>
+
+<footer></footer>
+<!--
+
+<sp-picker placeholder="Select operation..." style="width: 320px">
+    <sp-menu slot="options">
+        <sp-menu-item> Match First Frame to Last Frame </sp-menu-item>
+        <sp-menu-item> Match Last Frame to First Frame </sp-menu-item>
+        <sp-menu-divider></sp-menu-divider>
+        <sp-menu-item> Match both to an Image... </sp-menu-item>
+    </sp-menu>
+</sp-picker>
+
+
+
+    <section id="colormatch">
+ 
+        <div id="instamatch" class="block"> 
+            <div class="content">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path class="fa-secondary" opacity=".4" d="M0 128c0 4.8 3 9.1 7.5 10.8L64 160l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L128 160l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L128 96 106.8 39.5C105.1 35 100.8 32 96 32s-9.1 3-10.8 7.5L64 96 7.5 117.2C3 118.9 0 123.2 0 128zM192 64c0 3.2 2 6.1 5 7.2l37.7 14.1L248.8 123c1.1 3 4 5 7.2 5s6.1-2 7.2-5l14.1-37.7L315 71.2c3-1.1 5-4 5-7.2s-2-6.1-5-7.2L277.3 42.7 263.2 5c-1.1-3-4-5-7.2-5s-6.1 2-7.2 5L234.7 42.7 197 56.8c-3 1.1-5 4-5 7.2zm124.7 60.7c13.2 13.2 26.4 26.4 39.6 39.6l105-105 23.3 23.3-105 105c13.2 13.2 26.4 26.4 39.6 39.6c36.9-36.9 73.8-73.8 110.7-110.7c18.7-18.7 18.7-49.1 0-67.9L495.3 14.1c-18.7-18.7-49.1-18.7-67.9 0C390.5 51 353.6 87.8 316.7 124.7zM352 384c0 4.8 3 9.1 7.5 10.8L416 416l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 416l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 352l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 352l-56.5 21.2c-4.5 1.7-7.5 6-7.5 10.8z"/><path class="fa-primary" d="M419.2 227.2L316.7 124.7 46.1 395.4c-18.7 18.7-18.7 49.1 0 67.9l34.6 34.6c18.7 18.7 49.1 18.7 67.9 0L419.2 227.2z"/></svg>
+                </div>
+                <div class="label">
+                    <span class="lang" data-label="button instamatch"></span> 
+                </div>
+            </div>
+        </div>
+
+        <sp-slider min="0" max="100" value-label="%" value="100" default="100" size="S" id="match-opacity" class="block" data-option="matchOpacity">
+            <sp-label slot="label" size="S">
+                <span class="lang" data-label="slider opacity"></span>
+            </sp-label>
+        </sp-slider>
+
+        <div class="wrapper block"> 
+
+            <div class="header main">
+                <div class="title">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path class="fa-secondary" opacity=".4" d="M0 176L0 464c0 26.5 21.5 48 48 48l224 0c26.5 0 48-21.5 48-48l0-48-64 0 0 32L64 448l0-256 64 0 0-64-80 0c-26.5 0-48 21.5-48 48z"/><path class="fa-primary" d="M160 48c0-26.5 21.5-48 48-48H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48z"/></svg>
+                    </div>
+                    <div class="label">
+                        <span class="lang" data-label="colormatch title"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+
+                <div class="header"> 
+                    <div class="title">
+                        <div class="icon">
+                            <svg class="empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="fa-secondary" opacity=".4" d="M0 480c0 8.3 3.2 16.5 9.4 22.6s14.4 9.4 22.6 9.4c6.1 0 12.3-1.8 17.7-5.4L89.7 480l42.4 0c21.2 0 41.6-8.4 56.6-23.4L332 313.3 286.7 268 143.4 411.3c-3 3-7.1 4.7-11.3 4.7L96 416l0-36.1c0-4.2 1.7-8.3 4.7-11.3L244 225.3c-15.1-15.1-30.2-30.2-45.3-45.3L55.4 323.3c-15 15-23.4 35.4-23.4 56.6l0 42.4L5.4 462.2C1.8 467.7 0 473.8 0 480z"/><path class="fa-primary" d="M240.1 130.8L341.6 29.2c39-39 102.2-39 141.1 0s39 102.2 0 141.1L381.2 271.9l9.4 9.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l9.4 9.4z"/></svg>
+                            <svg class="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="fa-secondary" opacity=".4" d="M5.4 462.2c-8.5 12.7-6.8 29.6 4 40.4c6.2 6.2 14.4 9.4 22.6 9.4c6.1 0 12.3-1.8 17.7-5.4L89.7 480l42.4 0c21.2 0 41.6-8.4 56.6-23.4L332 313.3 286.7 268c-17.3 17.3-34.7 34.7-52 52l-91.3 91.3c-3 3-7.1 4.7-11.3 4.7L96 416c0-12 0-24.1 0-36.1c0-.5 0-1.1 .1-1.6s.1-1 .2-1.6c.2-1 .5-2 .9-3c.8-1.9 2-3.7 3.5-5.2c16.2-16.2 32.4-32.4 48.6-48.6c31.6-31.6 63.2-63.2 94.7-94.7c-15.1-15.1-30.2-30.2-45.3-45.3L55.4 323.3c-15 15-23.4 35.4-23.4 56.6l0 42.4L5.4 462.2z"/><path class="fa-primary" d="M341.6 29.2L240.1 130.8l-9.4-9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-9.4-9.4L482.8 170.4c39-39 39-102.2 0-141.1s-102.2-39-141.1 0zM143.4 411.3L234.7 320l-85.5 0-48.6 48.6c-3 3-4.7 7.1-4.7 11.3L96 416l36.1 0c4.2 0 8.3-1.7 11.3-4.7z"/></svg>
+                        </div>
+                        <div class="label">
+                            <span class="lang" data-label="sample title"></span>
+                        </div> 
+                    </div>
+                </div>
+
+                <div id="sample-layer" class="action button getfullwidth" title="Active Layer"><span class="lang" data-label="button sample layer"></span></div>
+                <div id="sample-document" class="action button get fullwidth" title="Active Document"><span class="lang" data-label="button sample document"></span></div>
+                <div id="sample-image" class="action button get fullwidth"><span class="lang" data-label="button sample image"></span></div>
+
+            </div>
+            <div class="content segue">
+
+                <div class="header">
+                    <div class="title">
+                        <div class="icon">
+                            <svg class="empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">><path class="fa-primary" d="M86.6 9.4C74.1-3.1 53.9-3.1 41.4 9.4s-12.5 32.8 0 45.3L122.7 136 30.6 228.1c-37.5 37.5-37.5 98.3 0 135.8L148.1 481.4c37.5 37.5 98.3 37.5 135.8 0L474.3 290.9c28.1-28.1 28.1-73.7 0-101.8L322.9 37.7c-28.1-28.1-73.7-28.1-101.8 0L168 90.7 86.6 9.4zM168 181.3l49.4 49.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L213.3 136l53.1-53.1c3.1-3.1 8.2-3.1 11.3 0L429.1 234.3c3.1 3.1 3.1 8.2 0 11.3L238.6 436.1c-12.5 12.5-32.8 12.5-45.3 0L75.9 318.6c-12.5-12.5-12.5-32.8 0-45.3L168 181.3z" /></svg>
+                            <svg class="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path class="fa-secondary" opacity=".4" d="M66.5 296c0 8.2 3.1 16.4 9.4 22.6L193.4 436.1c12.5 12.5 32.8 12.5 45.3 0C288 386.7 337.4 337.4 386.7 288L67.5 288c-.7 2.6-1 5.3-1 8zM448 448c0 35.3 28.7 64 64 64s64-28.7 64-64c0-25.2-32.6-79.6-51.2-108.7c-6-9.4-19.5-9.4-25.5 0C480.6 368.4 448 422.8 448 448z" /><path class="fa-primary" d="M86.6 9.4C74.1-3.1 53.9-3.1 41.4 9.4s-12.5 32.8 0 45.3L122.7 136 30.6 228.1c-37.5 37.5-37.5 98.3 0 135.8L148.1 481.4c37.5 37.5 98.3 37.5 135.8 0L474.3 290.9c28.1-28.1 28.1-73.7 0-101.8L322.9 37.7c-28.1-28.1-73.7-28.1-101.8 0L168 90.7 86.6 9.4zM168 181.3l49.4 49.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L213.3 136l53.1-53.1c3.1-3.1 8.2-3.1 11.3 0L429.1 234.3c3.1 3.1 3.1 8.2 0 11.3L238.6 436.1c-12.5 12.5-32.8 12.5-45.3 0L75.9 318.6c-12.5-12.5-12.5-32.8 0-45.3L168 181.3z" /></svg>
+                        </div>
+                        <div class="label">
+                            <span class="lang" data-label="match title"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="match-layer" class="action button set fullwidth"><span class="lang" data-label="button match layer"></span></div>
+                <div id="match-document" class="action button set fullwidth"><span class="lang" data-label="button match document"></span></div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+
+    <section id="settings">
+
+        <div class="wrapper block">
+
+            <div class="header main">
+                <div class="title">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="fa-secondary" opacity=".4" d="M192 256a64 64 0 1 0 128 0 64 64 0 1 0 -128 0z"/><path class="fa-primary" d="M489.6 191.2c6.9-6.2 9.6-15.9 6.4-24.6c-4.4-11.9-9.7-23.3-15.8-34.3l-4.7-8.1c-6.6-11-14-21.4-22.1-31.2c-5.9-7.2-15.7-9.6-24.5-6.8l-55.7 17.7C359.8 93.6 345 85 329.2 78.4L316.7 21.3c-2-9.1-9-16.3-18.2-17.8C284.7 1.2 270.5 0 256 0s-28.7 1.2-42.5 3.5c-9.2 1.5-16.2 8.7-18.2 17.8L182.8 78.4c-15.8 6.5-30.6 15.1-44 25.4L83.1 86.1c-8.8-2.8-18.6-.3-24.5 6.8c-8.1 9.8-15.5 20.2-22.1 31.2l-4.7 8.1c-6.1 11-11.4 22.4-15.8 34.3c-3.2 8.7-.5 18.4 6.4 24.6l43.3 39.4C64.6 238.9 64 247.4 64 256s.6 17.1 1.7 25.4L22.4 320.8c-6.9 6.2-9.6 15.9-6.4 24.6c4.4 11.9 9.7 23.3 15.8 34.3l4.7 8.1c6.6 11 14 21.4 22.1 31.2c5.9 7.2 15.7 9.6 24.5 6.8l55.7-17.7c13.4 10.3 28.2 18.9 44 25.4l12.5 57.1c2 9.1 9 16.3 18.2 17.8c13.8 2.3 28 3.5 42.5 3.5s28.7-1.2 42.5-3.5c9.2-1.5 16.2-8.7 18.2-17.8l12.5-57.1c15.8-6.5 30.6-15.1 44-25.4l55.7 17.7c8.8 2.8 18.6 .3 24.5-6.8c8.1-9.8 15.5-20.2 22.1-31.2l4.7-8.1c6.1-11 11.4-22.4 15.8-34.3c3.2-8.7 .5-18.4-6.4-24.6l-43.3-39.4c1.1-8.3 1.7-16.8 1.7-25.4s-.6-17.1-1.7-25.4l43.3-39.4zM256 160a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
+                    </div>
+                    <div class="label">
+                        <span class="lang" data-label="settings title"></span>
+                    </div>
+                </div>
+                <div class="icon-toggle switch action tooltip" data-option="autoRefresh" data-tip="toggle autorefresh">
+                    <input type="checkbox" id="toggle-refresh">
+                    <div class="icon">
+                        <svg class="off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="fa-secondary" opacity=".4" d="M16 312l0 7.6c0 .2 0 .5 0 .7L16 440c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2l41.6-41.6c87.6 86.5 228.7 86.2 315.8-1c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.2 62.2-162.7 62.5-225.3 1L185 329c6.9-6.9 8.9-17.2 5.2-26.2s-12.5-14.8-22.2-14.8L48.4 288c-.2 0-.5 0-.7 0L40 288c-13.3 0-24 10.7-24 24z"/><path class="fa-primary" d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8l119.5 0c0 0 0 0 0 0l8.4 0c13.3 0 24-10.7 24-24l0-128c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5z"/></svg>
+                        <svg class="on" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="fa-secondary" opacity=".4" d="M16 312l0 7.6c0 .2 0 .5 0 .7L16 440c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2l41.6-41.6c87.6 86.5 228.7 86.2 315.8-1c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.2 62.2-162.7 62.5-225.3 1L185 329c6.9-6.9 8.9-17.2 5.2-26.2s-12.5-14.8-22.2-14.8L48.4 288c-.2 0-.5 0-.7 0L40 288c-13.3 0-24 10.7-24 24z"/><path class="fa-primary" d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8l119.5 0c0 0 0 0 0 0l8.4 0c13.3 0 24-10.7 24-24l0-128c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5z"/></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <div class="toggles">
+                    <div class="toggle" data-option="skinTones">
+                        <input type="checkbox" id="match-skin">
+                        <div class="flip"></div>
+                        <label><span class="lang" data-label="flip match skin"></span></label>
+                    </div>
+
+                    <div class="toggle pro hide" data-option="clipProtection">
+                        <input type="checkbox" id="match-clip">
+                        <div class="flip"></div>
+                        <label><span class="lang" data-label="flip match clip"></span></label>
+                    </div>
+                </div>
+
+                <sp-slider min="0" max="100" value-label="%" value="50" default="50" size="S" id="skin-protection" class="fullwidth pro" data-option="skinProtection">
+                    <sp-label slot="label" size="S">
+                        <span class="lang" data-label="slider skin protection"></span>
+                    </sp-label>
+                </sp-slider>                
+
+            </div>
+
+            <div class="content segue pro">
+
+                <div class="header">
+                    <div class="title">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="fa-secondary" opacity=".4" d="M64 64l64 0 0 64-64 0 0-64zm0 128l64 0 0 64-64 0 0-64zM173.1 473.1c.8-1.1 1.7-2.3 2.5-3.5c5.2-7.7 9.3-16.1 12.1-25.1c1.4-4.5 2.5-9.2 3.2-13.9c.4-2.4 .6-4.8 .8-7.2c.1-1.2 .2-2.4 .2-3.7s.1-2.5 .1-3.7l0-230L299.4 78.6c12.5-12.5 32.8-12.5 45.3 0l90.5 90.5c12.5 12.5 12.5 32.8 0 45.3L189.7 459.9c-5.1 5.1-10.7 9.5-16.5 13.2zm9.7 38.9l192-192L480 320c17.7 0 32 14.3 32 32l0 128c0 17.7-14.3 32-32 32l-297.2 0z" /><path class="fa-primary" d="M32 0C14.3 0 0 14.3 0 32L0 416c0 53 43 96 96 96s96-43 96-96l0-384c0-17.7-14.3-32-32-32L32 0zm96 64l0 64-64 0 0-64 64 0zM64 192l64 0 0 64-64 0 0-64zM96 392a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" /></svg>
+                        </div>
+                        <div class="label">
+                            <span class="lang" data-label="colors title"></span>
+                        </div>
+                    </div>
+                    <div class="action hide" id="colors-reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z"/></svg>
+                    </div>                    
+                    <div class="action hide" id="colors-clear">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0L284.2 0c12.1 0 23.2 6.8 28.6 17.7L320 32l96 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 96C14.3 96 0 81.7 0 64S14.3 32 32 32l96 0 7.2-14.3zM32 128l384 0 0 320c0 35.3-28.7 64-64 64L96 512c-35.3 0-64-28.7-64-64l0-320zm96 64c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-224c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-224c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-224c0-8.8-7.2-16-16-16z"/></svg>
+                    </div>
+                </div>            
+
+                <div id="colors-wrapper">
+                    <div class="icons hide">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" title="Sampled Colors"><path d="M240.1 130.8L341.6 29.2c39-39 102.2-39 141.1 0s39 102.2 0 141.1L381.2 271.9l9.4 9.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l9.4 9.4zm-63.9 71.8l45.3 45.3L149.3 320l85.5 0 29.4-29.4 45.3 45.3L188.7 456.6c-15 15-35.4 23.4-56.6 23.4l-42.4 0L49.8 506.6c-12.7 8.5-29.6 6.8-40.4-4s-12.5-27.7-4-40.4L32 422.3l0-42.4c0-21.2 8.4-41.6 23.4-56.6L176.1 202.6z"/></svg>
+                        <div class="separator"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" title="Corrected Colors"><path d="M0 416c0 13.3 10.7 24 24 24l59.7 0c10.2 32.5 40.5 56 76.3 56s66.1-23.5 76.3-56L488 440c13.3 0 24-10.7 24-24s-10.7-24-24-24l-251.7 0c-10.2-32.5-40.5-56-76.3-56s-66.1 23.5-76.3 56L24 392c-13.3 0-24 10.7-24 24zm128 0a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM320 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32-80c-35.8 0-66.1 23.5-76.3 56L24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l251.7 0c10.2 32.5 40.5 56 76.3 56s66.1-23.5 76.3-56l59.7 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-59.7 0c-10.2-32.5-40.5-56-76.3-56zM192 128a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm76.3-56C258.1 39.5 227.8 16 192 16s-66.1 23.5-76.3 56L24 72C10.7 72 0 82.7 0 96s10.7 24 24 24l91.7 0c10.2 32.5 40.5 56 76.3 56s66.1-23.5 76.3-56L488 120c13.3 0 24-10.7 24-24s-10.7-24-24-24L268.3 72z"/></svg>
+                    </div>
+                    <div id="color-palette">
+                    </div>
+                </div>   
+
+                <sp-slider min="2" max="10" value="5" default="5" size="S" id="colors-samples" class="fullwidth pro" data-option="matchSamples">
+                    <sp-label slot="label" size="S">
+                        <span class="lang" data-label="slider match colors"></span>
+                    </sp-label>
+                </sp-slider>
+
+            </div>
+
+            <div class="content segue pro">
+
+                <div class="header">
+                    <div class="title">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="fa-secondary" opacity=".4" d="M0 96C0 78.3 14.3 64 32 64l86.7 0c-2.1 4.9-3.8 10.1-4.9 15.4c-.6 2.7-1 5.4-1.3 8.2c-.1 1.4-.3 2.8-.3 4.2s-.1 2.8-.1 4.2c0 11.4 2.4 22.2 6.7 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l246.7 0c-2.1 4.9-3.8 10.1-4.9 15.4c-.6 2.7-1 5.4-1.3 8.2c-.1 1.4-.3 2.8-.3 4.2s-.1 2.8-.1 4.2c0 11.4 2.4 22.2 6.7 32L32 288c-17.7 0-32-14.3-32-32zM0 416c0-17.7 14.3-32 32-32l54.7 0c-2.1 4.9-3.8 10.1-4.9 15.4c-.6 2.7-1 5.4-1.3 8.2c-.1 1.4-.3 2.8-.3 4.2s-.1 2.8-.1 4.2c0 11.4 2.4 22.2 6.7 32L32 448c-17.7 0-32-14.3-32-32zm233.3-32L480 384c17.7 0 32 14.3 32 32s-14.3 32-32 32l-246.7 0c2.1-4.9 3.8-10.1 4.9-15.4c.6-2.7 1-5.4 1.3-8.2c.1-1.4 .3-2.8 .3-4.2s.1-2.8 .1-4.2c0-11.4-2.4-22.2-6.7-32zm32-320L480 64c17.7 0 32 14.3 32 32s-14.3 32-32 32l-214.7 0c2.1-4.9 3.8-10.1 4.9-15.4c.6-2.7 1-5.4 1.3-8.2c.1-1.4 .3-2.8 .3-4.2s.1-2.8 .1-4.2c0-11.4-2.4-22.2-6.7-32zm160 160l54.7 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-54.7 0c2.1-4.9 3.8-10.1 4.9-15.4c.6-2.7 1-5.4 1.3-8.2c.1-1.4 .3-2.8 .3-4.2s.1-2.8 .1-4.2c0-11.4-2.4-22.2-6.7-32z" /><path class="fa-primary" d="M128 416a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm112 0A80 80 0 1 0 80 416a80 80 0 1 0 160 0zm80-160a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm112 0a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM192 128a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm0-112a80 80 0 1 0 0 160 80 80 0 1 0 0-160z" /></svg>
+                        </div>
+                        <div class="label">
+                            <span class="lang" data-label="correction title"></span>
+                        </div>
+                    </div>
+                    <div class="action" id="correction-reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z"/></svg>
+                    </div>
+                </div>   
+
+                <sp-slider min="-180" max="180" value-label="˚" value="0" default="0" size="S" id="correct-hue" class="fullwidth" data-option="matchHue">
+                    <sp-label slot="label" size="S">
+                        <span class="lang" data-label="slider correction hue"></span>
+                    </sp-label>
+                </sp-slider>
+
+                <sp-slider min="-50" max="50" value-label="%" value="0" default="0" size="S" id="correct-saturation" class="fullwidth" data-option="matchSaturation">
+                    <sp-label slot="label" size="S">
+                        <span class="lang" data-label="slider correction saturation"></span>
+                    </sp-label>
+                </sp-slider>
+                
+                <sp-slider min="-50" max="50" value-label="%" value="0" default="0" size="S" id="correct-brightness" class="fullwidth" data-option="matchBrightness">
+                    <sp-label slot="label" size="S">
+                        <span class="lang" data-label="slider correction brightness"></span>
+                    </sp-label>
+                </sp-slider>
+
+            </div>
+
+            <div class="openclose">
+                <svg class="pro" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M239 111c9.4-9.4 24.6-9.4 33.9 0L465 303c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-175-175L81 337c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L239 111z"/></svg>
+                <svg class="normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z"/></svg>
+            </div>
+
+        </div>
+
+    </section>
+
+-->
+
+    <div class="interface">
+        <div class="app-theme darkest" theme="darkest"></div>
+        <div class="app-theme dark" theme="dark"></div>
+        <div class="app-theme light" theme="light"></div>
+        <div class="app-theme lightest" theme="lightest"></div>
+    </div>
+
+    <dialog id="about">
+        <div class="head">
+            <img src="images/logo_02.png"> 
+        </div>
+        <div class="text">
+            <span class="lang" data-label="dialog about text"></span>
+        </div>
+        <div class="credits">
+            <span class="lang" data-label="dialog about credits"></span>
+        </div>
+   </dialog>    
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

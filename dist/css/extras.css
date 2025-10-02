@@ -1,0 +1,384 @@
+:root {
+    --logo-background: #131313;
+
+    --magic-touch-1: #fac81b;
+    --magic-touch-2: #f40e64;
+    --magic-touch-3: #4c01bd;
+
+    --magic-scape-1: #c051ff;
+    --magic-scape-2: #16caff;
+    --magic-scape-3: #aeff75;
+
+    --magic-color-1: #006481;
+    --magic-color-2: #008169;
+    --magic-color-3: #f3f77d;
+
+    --pencil-color-1: #00B1FF;
+    --pencil-color-2: #19F1BA;
+    --pencil-color-3: #FF8F4B;    
+
+    --text-color: #333;
+
+    --button-ok-color: #fff;
+
+}
+
+@media (prefers-color-scheme: darkest) {
+
+    :root {
+        --background-color: #19191a;
+        --text-color: #ccc;
+        --button-color: #3e3f40;
+        --button-text-color: #ccc;
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --background-color: #19191a;
+        --text-color: #ccc;
+        --button-color: #3e3f40;
+        --button-text-color: #ccc;
+    }
+
+}
+
+
+@media (prefers-color-scheme: light) {
+
+    :root {
+        --background-color: #ebecf0;
+        --text-color: #333;
+        --button-color: #babbbe;
+        --button-text-color: #333;
+    }
+
+}
+
+@media (prefers-color-scheme: lightest) {
+
+    :root {
+        --background-color: #ebecf0;
+        --text-color: #333;
+        --button-color: #babbbe;
+        --button-text-color: #333;
+    }
+
+}
+
+body.modal-open sp-textfield{
+    display: none;
+}
+
+body.modal-open section {
+    overflow: hidden;
+}
+
+/* Modal Window */
+#modal {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: start;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh);
+    overflow: hidden;
+    background-color: var(--background-color);
+    z-index: 999;
+}
+
+#modal a {
+    color: var(--magic-touch-2);
+}
+
+#modal.active {
+    display: flex;  
+}
+
+#modal .content {
+    position: relative;
+    width: 100%;
+    padding: 16px;
+    max-width: 300px;
+    background-color: var(--background-color);
+}
+
+@media (min-width: 301px) {
+    #modal {
+        align-items: center;
+        background: var(--uxp-host-background-color);
+    }
+
+    #modal .content{
+        border-radius: 10px;
+        padding: 16px;
+    }    
+}
+
+#modal .logo-outside {
+    padding: 12px;
+    background: linear-gradient(0.1turn, var(--magic-touch-1), var(--magic-touch-2), var(--magic-touch-3));
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal .logo-inside {
+    padding: 15px;
+    background: var(--logo-background);
+    border-radius: 100%;
+}
+
+#modal .logo {
+    width: 100px;
+    height: 100px;
+    background: url(../images/cmp.svg);
+    background-size: contain;
+    background-position-y: 35%;
+}
+
+#modal .head {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#modal .head .icon {
+    fill: var(--text-color);
+}
+
+#modal .head .icon:hover {
+    fill: var(--text-color);
+}
+
+#modal .head .icon.close svg {
+    width: 16px;
+    height: 16px;
+}
+
+#modal .image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+#modal .text {
+    font-size: 11px;
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+#modal .text p {
+    margin-bottom: 6px;
+}
+
+#modal .text p:last-child {
+    margin-bottom: 0;
+}
+
+#modal .title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--magic-touch-2);
+}
+
+#modal .text .title {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#modal .description {
+    margin-bottom: 10px;
+}
+
+#modal .description:last-child {
+    margin-bottom: 0;
+}
+
+#modal .input {
+
+}
+
+#modal sp-textfield {
+    width: 100%;
+}
+
+#modal .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal .button {
+    flex: 1 1 auto;
+    margin-right: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    /* border: solid 1px var(--uxp-host-border-color); */
+    border-radius: var(--button-radius);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#modal .button:last-child {
+    margin-right: 0;
+}
+
+#modal .button:hover {
+    color: var(--magic-touch-2);
+}
+
+#modal .button.ok {
+    background-color: var(--magic-touch-2);
+    color: var(--button-ok-color);
+}
+
+#modal .button.ok:hover {
+    color: var(--magic-touch-1);
+}
+
+/* Dialog Elements */
+dialog {
+    padding: 10px;
+    font-size: 13px;
+    color: var(--uxp-host-text-color-secondary)
+}
+
+dialog .label {
+    margin: 10px;
+    margin-top: 0;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: solid 1px var(--uxp-host-text-color-secondary)
+}
+
+dialog .elements {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+dialog sp-checkbox {
+    flex: 0 1 30%;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+dialog .warning {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    border: solid 1px var(--uxp-host-text-color-secondary);
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+dialog .warning .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--uxp-host-text-color-secondary);
+    color: var(--uxp-host-border-color);
+}
+
+dialog .warning .text {
+    padding: 10px;
+    color: var(--uxp-host-text-color-secondary);
+}
+
+dialog .warning svg {
+    display: inline-block;
+    width: 20px;
+    fill: var(--uxp-host-border-color)
+}
+
+dialog .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+dialog .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--uxp-host-border-color);
+    border: solid 1px var(--uxp-host-border-color);
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 5px;
+    cursor: pointer;
+}
+
+dialog .button.icon {
+    border-radius: 5px;
+    color: var(--uxp-host-text-color-secondary);
+}
+
+dialog .button.icon:hover {
+    color: var(--uxp-host-text-color);
+    border-color: var(--uxp-host-text-color-secondary);
+}
+
+dialog .button.icon svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--uxp-host-text-color-secondary);
+    margin-right: 5px;
+}
+
+dialog .button.icon:hover svg {
+    fill: var(--uxp-host-text-color)
+}
+
+
+/* Messages */
+
+#message {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 999; 
+    
+}
+
+#message.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100px;
+
+}
+
+#message .text {
+    font-size: 14px;
+    color: var(--uxp-host-text-color);
+    font-weight: 600;
+    background: var(--uxp-host-border-color);
+    padding: 16px 24px;
+    border-radius: 24px;
+}
