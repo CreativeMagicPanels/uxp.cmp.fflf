@@ -1,0 +1,136 @@
+:root {
+
+    --toggle-height: 16px;
+
+    --button-radius: 20px;
+
+
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    /* color: var(--uxp-host-text-color-secondary); */
+    background-color: var(--uxp-host-background-color);
+}
+
+
+
+.button {
+
+}
+
+
+
+
+
+
+
+.toggles .label {
+    margin-left: 5px;
+    color: var(--button-text);
+}
+
+.toggles .label:first-child {
+    margin-left: 0;
+}
+
+.toggle,
+.icon-toggle {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: var(--margin) 0;
+}
+
+.toggle:first-child {
+    margin-left: 0;
+}
+
+.toggle .flip {
+    position: relative;
+    flex: 0 0 auto;
+    width: calc( (var(--toggle-height) * 2) - 5px );
+    height: var(--toggle-height);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: solid 1px var(--button-text); */
+    background-color: var(--uxp-host-border-color);
+    border-radius: calc( var(--toggle-height) / 2 );
+    cursor: pointer;
+    padding: 2px;
+}
+
+.toggle .flip.checked {
+    justify-content: flex-end;
+    background-color: var(--uxp-host-link-text-color);
+}
+
+.toggle .flip:after {
+    content: "";
+    width: calc( var(--toggle-height) - 4px );
+    height: calc( var(--toggle-height) - 4px );
+    background-color: rgba(255,255,255,0.75);
+    border-radius: 50%;
+}
+
+.toggle:hover .flip:after,
+.toggle .flip.checked:after {
+    background-color: white;
+}
+
+.toggle label {
+    font-size: 11px;
+    flex: 1 0 auto;
+    margin-left: 5px;
+    color: var(--text-secondary);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.toggle:hover label,
+/* .toggle.active label, */
+.toggle .flip.checked label {
+    color: var(--text-primary);
+}
+
+.toggle input,
+.icon-toggle input {
+    display: none;
+}
+
+.icon-toggle {
+    cursor: pointer;
+    fill: rgba(255,255,255,0.3);
+}
+
+.icon-toggle:hover {
+    fill: rgba(255,255,255,0.5);
+}
+
+.icon-toggle svg {
+    width: 14px;
+    height: 14px;
+}
+
+.icon-toggle .icon.checked,
+.icon-toggle.switch {
+    fill: rgba(255,255,255,0.8);
+}
+
+.icon-toggle:hover .icon.checked,
+.icon-toggle.switch:hover {
+    fill: white;
+}
+
+.icon-toggle .icon .on,
+.icon-toggle .icon.checked .off {
+    display: none;
+}
+
+.icon-toggle .icon .off,
+.icon-toggle .icon.checked .on {
+    display: block;
+}

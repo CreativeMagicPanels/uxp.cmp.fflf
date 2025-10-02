@@ -1,0 +1,88 @@
+{
+	"id": "uxp.cmp.fflf",
+	"name": "First Frame, Last Frame",
+	"version": "1.5.0",
+	"main": "index.html",
+	"manifestVersion": 5,
+  "host": [
+    {
+      "app": "PS",
+      "minVersion": "24.5",
+      "data": {
+        "apiVersion": 2
+      }
+    }
+  ],
+  "requiredPermissions": {
+    "clipboard": "readAndWrite",
+    "network": { "domains": "all" },
+    "allowCodeGenerationFromStrings": true,
+	"localFileSystem": "fullAccess",
+	"launchProcess": {
+		"schemes": ["http","https","mailto"]
+	  },
+    "ipc": {
+        "enableHostCommunication": true,
+        "enablePluginCommunication": true
+    }
+  },
+	"entrypoints": [
+		{
+			"type": "panel",
+			"id": "main",
+			"label": {
+				"default": "First Frame, Last Frame"
+			},
+			"minimumSize": {
+				"width": 300,
+				"height": 420
+			},
+			"maximumSize": {
+				"width": 300,
+				"height": 420
+			},
+			"preferredDockedSize": {
+				"width": 300,
+				"height": 420
+			},
+			"preferredFloatingSize": {
+				"width": 300,
+				"height": 420
+			},
+			"icons": [{
+					"width": 23,
+					"height": 23,
+					"path": "icons/fflf_dark.png",
+					"scale": [1, 2],
+					"theme": ["dark", "darkest", "medium"],
+					"species": ["chrome"]
+				},
+				{
+					"width": 23,
+					"height": 23,
+					"path": "icons/fflf_light.png",
+					"scale": [1, 2],
+					"theme": ["lightest", "light"],
+					"species": ["chrome"]
+				}
+			]
+		}
+	],
+	"icons": [{
+			"width": 48,
+			"height": 48,
+			"path": "icons/fflf_dark_plugin.png",
+			"scale": [1, 2],
+			"theme": ["dark", "darkest", "medium"],
+			"species": ["pluginList"]
+		},
+		{
+			"width": 48,
+			"height": 48,
+			"path": "icons/fflf_light_plugin.png",
+			"scale": [1, 2], 
+			"theme": ["lightest", "light"],
+			"species": ["pluginList"] 
+		}
+	]
+}

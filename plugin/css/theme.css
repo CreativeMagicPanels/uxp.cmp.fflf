@@ -1,0 +1,99 @@
+:root {
+    --base-100: #fff;
+    --base-95: #f2f2f2;
+    --base-90: #e6e6e6;
+    --base-85: #d9d9d9;
+    --base-80: #cccccc;
+    --base-75: #bfbfbf;
+    --base-70: #b3b3b3;
+    --base-65: #a6a6a6;
+    --base-60: #999999;
+    --base-55: #8c8c8c;
+    --base-50: #808080;
+    --base-45: #737373;
+    --base-40: #666666;
+    --base-35: #595959;
+    --base-30: #4d4d4d;
+    --base-25: #404040;
+    --base-20: #333333;
+    --base-15: #262626;
+    --base-10: #1a1a1a;
+    --base-5: #0d0d0d;
+    --base-0: #000000;
+}
+
+@media (prefers-color-scheme: light),(prefers-color-scheme: lightest) {
+
+    :root {
+        --base-0: #fff;
+        --base-5: #f2f2f2;
+        --base-10: #e6e6e6;
+        --base-15: #d9d9d9;
+        --base-20: #cccccc;
+        --base-25: #bfbfbf;
+        --base-30: #b3b3b3;
+        --base-35: #a6a6a6;
+        --base-40: #999999;
+        --base-45: #8c8c8c;
+        --base-50: #808080;
+        --base-55: #737373;
+        --base-60: #666666;
+        --base-65: #595959;
+        --base-70: #4d4d4d;
+        --base-75: #404040;
+        --base-80: #333333;
+        --base-85: #262626;
+        --base-90: #1a1a1a;
+        --base-95: #0d0d0d;
+        --base-100: #000000;
+    }
+
+}
+
+body.dark-theme {
+    --base-100: #fff;
+    --base-95: #f2f2f2;
+    --base-90: #e6e6e6;
+    --base-85: #d9d9d9;
+    --base-80: #cccccc;
+    --base-75: #bfbfbf;
+    --base-70: #b3b3b3;
+    --base-65: #a6a6a6;
+    --base-60: #999999;
+    --base-55: #8c8c8c;
+    --base-50: #808080;
+    --base-45: #737373;
+    --base-40: #666666;
+    --base-35: #595959;
+    --base-30: #4d4d4d;
+    --base-25: #404040;
+    --base-20: #333333;
+    --base-15: #262626;
+    --base-10: #1a1a1a;
+    --base-5: #0d0d0d;
+    --base-0: #000000;
+}
+
+body.light-theme {
+    --base-0: #fff;
+    --base-5: #f2f2f2;
+    --base-10: #e6e6e6;
+    --base-15: #d9d9d9;
+    --base-20: #cccccc;
+    --base-25: #bfbfbf;
+    --base-30: #b3b3b3;
+    --base-35: #a6a6a6;
+    --base-40: #999999;
+    --base-45: #8c8c8c;
+    --base-50: #808080;
+    --base-55: #737373;
+    --base-60: #666666;
+    --base-65: #595959;
+    --base-70: #4d4d4d;
+    --base-75: #404040;
+    --base-80: #333333;
+    --base-85: #262626;
+    --base-90: #1a1a1a;
+    --base-95: #0d0d0d;
+    --base-100: #000000;
+}
